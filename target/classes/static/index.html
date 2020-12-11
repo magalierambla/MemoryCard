@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="./css/custom.css">
+    <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/30e6444f94.js" crossorigin="anonymous"></script>
+    <title>Flash Card Maker</title>
+  </head>
+  <body>
+    <header class="home">
+      <div class="container-fluid head">
+          <nav class="navbar navbar-dark bg-inverse fixed-top navbar-expand-lg bg-dark">
+            <a class="navbar-brand" href="index.html"><img src="./images/logo.png" alt="FlashCardMaker"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                  <a class="nav-link" href="index.html">Accueil <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="inscription.html">Inscription</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" onclick="acces('quizz.html')" href="#">Quizz</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="faq.html">FAQ</a>
+                </li>
+              </ul>
+              <ul class="navbar-nav ml-auto">
+                <li class="nav-item dropdown">
+                  <a class="nav-link" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-user"></i> Mon compte</a>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="index.html">Connexion</a>
+                    <a class="dropdown-item" onclick="acces('profil.html')" href="#">Profil</a>
+                    <a class="dropdown-item" onclick="acces('creer-deck.html')" href="#">Créer un deck</a>
+                    <a class="dropdown-item" onclick="acces('mes-decks.html')" href="#">Mes decks</a>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </nav>
+          <div id="intro" class="d-none d-sm-block">
+            <span id="introSpan1">Créez, </span><span id="introSpan2">jouez, </span><span id="introSpan3">apprenez !</span>
+          </div>
+          <div>&nbsp;</div>
+      </div>
+      <div class="container texteHome">
+        <div class="row">
+          <div class="col-xl-7 col-lg-8 col-sm-6 flexGauche align-self-start">
+            <div class="texteIntro">
+              <h2>Qu'est-ce-que Flash Card Maker&nbsp;?</h2>
+              <p>Flash Card Maker est un nouvel outil qui vous permet de créer des flash cards de façon rapide et ludique. Avec Flash Card Maker vous pouvez facilement débuter l'apprentissage d'une langue ou de toute autre thématique. Inscrivez-vous gratuitement pour bénéficier de toutes les fonctionnalités du site, cela ne prend qu'une minute !</p>
+              <a href="inscription.html"><button class="btn-primary">Je m'inscris gratuitement</button></a>
+            </div>
+          </div>
+          <div class="col-xl-1 d-none d-xl-block">
+              &nbsp;
+          </div>
+          <div class="col-xl-3 col-lg-4 col-sm-6 flexDroit align-self-end">
+            <div class="login">
+              <h2>Connexion</h2>
+              <div><input id="login" type="text" class="inputConnexion" placeholder="Votre identifiant"/></div>
+              <div><input id="password" type="password" class="inputConnexion" placeholder="Votre mot de passe"/></div>
+              <div><button onclick="connexion()" class="btn-outline-success">CONNEXION</button></div>
+              <p>Pas encore inscrit ? <a href="#">Inscrivez-vous</a> gratuitement en 1 minute !<br />Mot de passe oublié ? <a href="#">Cliquez ici</a></p>
+            </div>
+          </div>
+          <div class="col-xl-1 d-none d-xl-block">
+            &nbsp;
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="corps exemples">
+      <div class="container contenuBlanc">
+          <div class="row">
+            <div class="col-lg-12">
+              <h3>à quoi ça sert ?</h3>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-3 col-sm-6">
+                <p><i class="fas fa-american-sign-language-interpreting"></i></p>
+                <p>Vous avez un collègue sourd et vous aimeriez pouvoir communiquer plus facilement avec lui&nbsp;? Apprenez la langue des signes en créant des flash card !</p>
+            </div>
+            <div class="col-lg-3 col-sm-6">
+                <p><i class="fas fa-language"></i></p>
+                <p>Vous vous rendez à l'étranger prochainement et souhaitez apprendre quelques rudiments de la langue locale&nbsp;? Rien de plus facile avec des flash cards !</p>
+            </div>
+            <div class="col-lg-3 col-sm-6">
+                <p><i class="fas fa-code"></i></p>
+                <p>Vous étudiez l'informatique et souhaitez devenir un pro du language UML&nbsp;? Mémorisez les pictogrammes de modélisation grace aux flash cards !</p>
+            </div>
+            <div class="col-lg-3 col-sm-6">
+                <p><i class="fas fa-plus"></i></p>
+                <p>...et bien plus encore !<br />Avec Flash Card Maker, les possibilités sont infinies. La seule limite, c'est votre imagination !</p>
+            </div>
+          </div>
+      </div>
+    </div>
+    <div class="temoignages">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <h3>Témoignages</h3>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-4">
+              <p>Grâce à Flash Card Maker j'ai pu réviser mon code de la route et je l'ai eu du premier coup, que du bonheur !<br /><strong>Alain P. - Chauffeur</strong></p>
+          </div>
+          <div class="col-md-4">
+              <p>Un super site qui m'a permis de réviser quelques mots de grec avant mon voyage de noces, je recommande !<br /><strong>Elsa L. - Fonctionnaire</strong></p>
+          </div>
+          <div class="col-md-4">
+              <p>Site très pratique pour apprendre une langue, je l'utilise pour réviser les termes de cuisine vietnamienne.<br /><strong>Guillaume A. - Formateur</strong></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="corps">
+      <div class="container contenuBlanc">
+        <div class="row">
+          <div class="col-lg-12">
+            <h3>Accès rapide</h3>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-2 col-md-4 col-sm-6">
+              <p><a href="inscription.html"><button class="btnRaccourci"><i class="fas fa-sign-in-alt"></i></button></a></p>
+              <p>S'inscrire</p>
+          </div>
+          <div class="col-lg-2 col-md-4 col-sm-6">
+              <p><a href="faq.html"><button class="btnRaccourci"><i class="fas fa-question"></i></button></a></p>
+              <p>Aide</p>
+          </div>
+          <div class="col-lg-2 col-md-4 col-sm-6">
+              <p><button onclick="acces('creer-deck.html')" class="btnRaccourci"><i class="far fa-images"></i></button></p>
+              <p>Créer un deck</p>
+          </div>
+          <div class="col-lg-2 col-md-4 col-sm-6">
+              <p><button onclick="acces('mes-decks.html')" class="btnRaccourci"><i class="fas fa-th"></i></button></p>
+              <p>Mes decks</p>
+          </div>
+          <div class="col-lg-2 col-md-4 col-sm-6">
+              <p><button onclick="acces('profil.html')" class="btnRaccourci"><i class="fas fa-user"></i></button></p>
+              <p>Mon profil</p>
+          </div>
+          <div class="col-lg-2 col-md-4 col-sm-6">
+              <p><button onclick="acces('quizz.html')" class="btnRaccourci"><i class="fas fa-graduation-cap"></i></button></p>
+              <p>Quizz</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="homeFoot">
+      <div></div>
+    </footer>
+
+    <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script> -->
+    <script src="./js/jquery-3.4.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="./js/main-home.js"></script>
+
+    <script>
+      var recupLogin = sessionStorage.getItem('login');
+      var recupPass = sessionStorage.getItem('password');
+      var cards = undefined;
+      function connexion() {
+        var login = document.getElementById("login").value;
+        var pass = document.getElementById("password").value;
+        $.ajax({
+            url: "./utilisateur/all",
+            headers: {"login" : login, "password" : pass}
+          }).done(function(d) {
+            users = d;
+            if (users == "") {
+              alert("Login ou mot de passe incorrects, veuillez réessayer.")
+            } else {
+              sessionStorage.setItem('login', login);
+              sessionStorage.setItem('password', pass);
+              window.location.href = "./mes-decks.html";
+            }
+        });
+      }
+    </script>
+
+  </body>
+</html>

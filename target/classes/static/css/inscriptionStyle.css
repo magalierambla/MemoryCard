@@ -1,0 +1,85 @@
+
+label {
+    color: #010101;
+}
+
+.wrong {
+    transform : scale(1.1);
+    transition : 1s;
+    border : 1px red solid;
+}
+
+.valid {
+    background-color: cadetblue;
+    /*border-radius: 20px;*/
+}
+
+#inscription .button-signup {
+    color: #FFF;
+    border: none;
+    border-radius: 10px;
+    background-color:#DD005A;
+}
+  
+#inscription .button-signup:hover {
+    background-color:#EA5A00;
+}
+
+#inscription .button-login {
+    color: #FFF;
+    border: none;
+    border-radius: 10px;
+    background-color: #EA5A00;
+  }
+  #inscription .btn.btn-outline-success.button-login:active, 
+  #inscription .btn.btn-outline-success.button-login:focus {
+    box-shadow: 0 0 0 0.2rem #DD005A;
+  }
+  
+#inscription .button-login:hover {
+    background-color: #DD005A;
+}
+
+input { 
+    width: 100% !important;
+    border: 1px solid #CCC !important;
+    border-radius: 10px !important;
+    padding-top: 2px !important;
+    padding-bottom: 2px !important;
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+    margin-bottom: 10px !important;
+    /*font-size: 0.9em !important;*/
+}
+
+.icon_trash {
+    color: red;
+    font-size: 23px;
+    margin-left: 5px;
+}
+        
+.plus_square {
+    font-size: 23px;
+    color: white;
+}
+.new_list {
+    width: 23.2em;
+}
+.add_element {
+    background: cadetblue;
+}
+.add_new_list {
+    margin-left: 32px;
+    margin-top: 25px;
+}
+input.add_new_list {
+    min-width: 250px;
+}
+
+.form-control.is-invalid.force_valid {
+    border-color: chartreuse;
+} 
+
+.inscription_form {
+    margin: 30px 0% !important;
+}

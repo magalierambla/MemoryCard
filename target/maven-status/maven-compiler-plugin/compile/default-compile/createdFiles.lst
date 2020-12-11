@@ -1,0 +1,15 @@
+IPI\flashcard\Deck.class
+IPI\flashcard\util\CardPdfController.class
+IPI\flashcard\DeckController.class
+IPI\flashcard\util\PdfGenerator.class
+IPI\flashcard\score\ScoreRepository.class
+IPI\flashcard\score\ScoreController.class
+IPI\flashcard\score\Score.class
+IPI\flashcard\DeckRepository.class
+IPI\flashcard\user\UtilisateurRepository.class
+IPI\flashcard\user\Utils.class
+IPI\flashcard\CardRepository.class
+IPI\flashcard\Card.class
+IPI\flashcard\user\Utilisateur.class
+IPI\flashcard\user\UtilisateurController.class
+IPI\flashcard\FlashcardApplication.class
